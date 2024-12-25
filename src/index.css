@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Press+Start+2P&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+@layer utilities {
+  ::selection {
+    background-color: #14e956;
+    color: #fff;
+  }
+}
+
+body {
+  font-family: "Press Start 2P", system-ui;
+  scroll-behavior: smooth;
+}

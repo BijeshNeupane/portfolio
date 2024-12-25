@@ -1,0 +1,26 @@
+.bg {
+  background-image: url("./src/assets/images/bg.png");
+  background-size: cover;
+  background-position: center;
+  border: none;
+  outline: none;
+}
+
+.blurDiv {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.left .top {
+  background: rgba(20, 233, 88, 0.2);
+  word-spacing: -8px;
+}
+
+.left .intro {
+  word-spacing: -2px;
+  line-height: 50px;
+}
+
+.left .intro span {
+  color: #14e958;
+  font-size: 1.6rem;
+}

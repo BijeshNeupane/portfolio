@@ -1,0 +1,8 @@
+.hamburger,
+.logo {
+  cursor: url(/src/assets/grab.svg) 15 15, move;
+}
+
+.hamburger img:active {
+  scale: 0.95;
+}
