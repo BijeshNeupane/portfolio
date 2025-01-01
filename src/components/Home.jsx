@@ -63,7 +63,7 @@ const Home = () => {
 
           <div className="intro capitalize text-2xl">
             A <span>Fullstack Developer</span> and a <span>Web Designer</span>.I
-            build <span>Websites</span> for businesses to <span>grow</span>
+            build <span>Websites</span> for businesses to <span>grow</span>.
           </div>
         </div>
 
