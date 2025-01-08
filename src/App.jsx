@@ -3,6 +3,7 @@ import Loader from "./components/Loader";
 import Navbar from "./components/Navbar";
 import { Routes, Route } from "react-router-dom";
 import Tools from "./components/Tools";
+import Slider from "./components/Slider";
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <Navbar />
       <Home />
       <Tools />
+      <Slider />
     </>
   );
 };
