@@ -1,5 +1,10 @@
 .tools {
   box-shadow: 0px 0px 4px 1px #14e958;
+  cursor: url(/src/assets/grab.svg) 15 15, move;
+  transition: all 0.1s ease-in-out;
+}
+.tools:hover {
+  box-shadow: 0px 0px 20px 4px #14e958;
 }
 
 .iconsForTools {

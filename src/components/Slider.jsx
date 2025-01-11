@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./css/Slider.css";
 import car1 from "../assets/car1.jpeg";
 import car2 from "../assets/car2.jpeg";
@@ -8,14 +8,37 @@ import car5 from "../assets/car5.jpeg";
 import car6 from "../assets/car6.jpeg";
 
 const images = [car1, car2, car3, car4, car5, car6];
+const description = [];
 
 const Slider = () => {
+  const slider = useRef(null);
+  const mouseEnterController = () => {
+    slider.current.style.animationPlayState = "paused";
+  };
+  const mouseExitController = () => {
+    slider.current.style.animationPlayState = "running";
+  };
   return (
-    <div className="banner bg-[#050810]">
-      <div className="slider" style={{ "--quantity": images.length }}>
+    <div className="banner bg-[#050815]">
+      <div
+        className="slider"
+        ref={slider}
+        style={{ "--quantity": images.length }}
+      >
         {images.map((image, index) => (
-          <div className="item" key={index} style={{ "--position": index + 1 }}>
+          <div
+            onMouseEnter={() => {
+              mouseEnterController();
+            }}
+            onMouseLeave={() => {
+              mouseExitController();
+            }}
+            className="item"
+            key={index}
+            style={{ "--position": index + 1 }}
+          >
             <img src={image} alt={`image${index + 1}`} />
+            <h1 className="px-4 py-4 text-[10px]">This is a project</h1>
           </div>
         ))}
       </div>
