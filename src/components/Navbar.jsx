@@ -15,9 +15,9 @@ const Navbar = () => {
   const clickHandler = (e) => {
     setClick(!click);
     if (click) {
-      menu.current.classList.add("gayab");
+      menu.current.style.scale = "0";
     } else {
-      menu.current.classList.remove("gayab");
+      menu.current.style.scale = "1";
     }
   };
   return (
