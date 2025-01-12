@@ -55,11 +55,11 @@ const Loader = () => {
 
   const name = "BIJESH";
   return (
-    <div className="mathi h-[100vh] w-[100%] flex justify-center items-center fixed bottom-0 left-0 z-[9999] right-0 bg-black text-white overflow-hidden scroll-m-0">
+    <div className="mathi h-[100vh] w-[100vw] flex justify-center items-center fixed top-0 left-0 z-[9999] right-0 bg-black text-white overflow-hidden scroll-m-0 tracking-[2vh]">
       {name.split("").map((char, index) => (
         <span
           key={index}
-          className="text-individual text-[12vw] text-transparent"
+          className="text-individual font-extrabold text-[20vw] text-transparent"
         >
           {char}
         </span>

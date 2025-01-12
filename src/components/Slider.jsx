@@ -44,7 +44,7 @@ const Slider = () => {
       </div>
 
       <div className="content">
-        <div className="projects text-[#14e958] text-3xl bg-[#12141d] px-8 py-4 rounded-lg">
+        <div className="projects text-[#14e958] text-[35px] font-bold bg-[#12141d] px-6 py-3 rounded-lg">
           <h1>Projects</h1>
         </div>
       </div>

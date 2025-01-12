@@ -18,10 +18,10 @@ gsap.registerPlugin(ScrollTrigger);
 const Tools = () => {
   useGSAP(() => {
     const ctx = gsap.context(() => {
-      gsap.from(".tools", {
+      gsap.from(".iconsForTools", {
         duration: 1,
         scale: 0,
-        rotate: -90,
+        rotate: 90,
         scrollTrigger: {
           trigger: ".toolSection",
           start: "top 60%",
@@ -29,10 +29,10 @@ const Tools = () => {
         },
       });
 
-      gsap.from(".iconsForTools", {
+      gsap.from(".tools", {
         duration: 1,
         scale: 0,
-        rotate: 90,
+        rotate: -90,
         scrollTrigger: {
           trigger: ".toolSection",
           start: "top 60%",
@@ -47,7 +47,7 @@ const Tools = () => {
   return (
     <div className="toolSection min-h-[calc(100vh-10vh)] flex justify-center items-center bg-[#050810] text-[#14e958] flex-col gap-20">
       {/* Icons Section */}
-      <div className="iconsForTools px-4 py-4 h-fit w-[80vw] rounded-lg bg-[#0c8c34] flex justify-center items-center gap-4 flex-wrap text-white text-xl">
+      <div className="iconsForTools px-4 py-4 h-fit w-[80vw] rounded-lg bg-[#0c8c34] flex justify-center items-center gap-4 flex-wrap text-white text-2xl font-semibold">
         <div className="react naam">
           <h1>React</h1>
           <img src={reactLogo} alt="React Logo" />
@@ -56,13 +56,13 @@ const Tools = () => {
           <h1>Mongo DB</h1>
           <img src={mongoDbLogo} alt="React Logo" />
         </div>
-        <div className="express naam">
-          <h1>Express js</h1>
-          <img src={expressLogo} alt="React Logo" />
-        </div>
         <div className="node naam">
           <h1>Node js</h1>
           <img src={nodejsLogo} alt="React Logo" />
+        </div>
+        <div className="express naam">
+          <h1>Express js</h1>
+          <img src={expressLogo} alt="React Logo" />
         </div>
         <div className="laravel naam">
           <h1>Laravel</h1>
@@ -82,7 +82,7 @@ const Tools = () => {
         </div>
       </div>
       {/* Tools Header */}
-      <div className="tools text-3xl bg-[#12141d] px-8 py-4 rounded-lg">
+      <div className="tools text-[35px] font-bold bg-[#12141d] px-6 py-3 rounded-lg">
         <h1>Tools</h1>
       </div>
     </div>

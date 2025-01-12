@@ -20,10 +20,14 @@
   width: 280px;
   background-color: #021709;
   border-radius: 20px;
-  word-spacing: -10px;
+  letter-spacing: 2px;
   cursor: url(/src/assets/grab.svg) 15 15, move;
 }
 
 .dotnet img {
   width: 60px;
+}
+
+.tools {
+  letter-spacing: 2px;
 }

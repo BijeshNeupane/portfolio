@@ -9,12 +9,12 @@ import Contact from "./components/Contact";
 const App = () => {
   return (
     <>
-      {/* <Loader />
+      <Loader />
       <Navbar />
       <Home />
       <Tools />
-      <Slider /> */}
-      <Contact />
+      <Slider />
+      {/* <Contact /> */}
     </>
   );
 };
