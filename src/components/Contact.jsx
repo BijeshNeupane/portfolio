@@ -27,7 +27,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-[#050810] min-h-[calc(100vh-10vh)] flex flex-col justify-center items-center relative">
+    <div className="overflow-hidden bg-[#050810] min-h-[calc(100vh-10vh)] flex flex-col justify-center items-center relative">
       <form
         ref={form}
         onSubmit={sendEmail}
@@ -126,7 +126,7 @@ const Contact = () => {
             Twitter
           </a>
         </div>
-        <div className="items downloadCV flex-1 bg-gray-800 hover:bg-gray-700">
+        <div className="items downloadCV flex-1 bg-gray-800 hover:bg-gray-700 w-full">
           <a
             href="/../../public/react php.pdf"
             download

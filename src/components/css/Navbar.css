@@ -6,3 +6,7 @@
 .hamburger img:active {
   scale: 0.95;
 }
+
+.gayab {
+  display: none;
+}

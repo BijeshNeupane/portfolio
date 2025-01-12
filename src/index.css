@@ -19,5 +19,5 @@ body::-webkit-scrollbar {
 body {
   font-family: "Orbitron", serif;
   scroll-behavior: smooth;
-  /* overflow: hidden; */
+  overflow-x: hidden;
 }

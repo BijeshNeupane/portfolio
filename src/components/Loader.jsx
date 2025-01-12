@@ -1,8 +1,8 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
-const Loader = () => {
+const Loader = ({ onAnimationComplete }) => {
   useGSAP(() => {
     var tl = gsap.timeline();
     tl.from(".text-individual", {
@@ -13,20 +13,16 @@ const Loader = () => {
       stagger: 0.4,
     });
 
-    gsap.to(
-      ".text-individual",
-
-      {
-        css: {
-          WebkitTextStrokeColor: "#14e956",
-          WebkitTextStrokeWidth: "6px",
-        },
-        delay: 0.2,
-        stagger: 0.4,
-        duration: 1.2,
-        ease: "sine.in",
-      }
-    );
+    gsap.to(".text-individual", {
+      css: {
+        WebkitTextStrokeColor: "#14e956",
+        WebkitTextStrokeWidth: "6px",
+      },
+      delay: 0.2,
+      stagger: 0.4,
+      duration: 1.2,
+      ease: "sine.in",
+    });
 
     tl.to(".text-individual", {
       color: "#14e956",
@@ -47,7 +43,9 @@ const Loader = () => {
 
     tl.to(".mathi", {
       display: "none",
+      onComplete: onAnimationComplete, // Callback to notify when the animation is done
     });
+
     return () => {
       tl.kill();
     };
