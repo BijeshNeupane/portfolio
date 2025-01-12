@@ -24,23 +24,11 @@ const Tools = () => {
         rotate: 90,
         scrollTrigger: {
           trigger: ".toolSection",
-          start: "top 60%",
-          end: "top 10%",
-        },
-      });
-
-      gsap.from(".tools", {
-        duration: 1,
-        scale: 0,
-        rotate: -90,
-        scrollTrigger: {
-          trigger: ".toolSection",
-          start: "top 60%",
+          start: "top 80%",
           end: "top 10%",
         },
       });
     });
-
     return () => ctx.revert();
   });
 

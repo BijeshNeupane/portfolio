@@ -19,7 +19,7 @@ const Slider = () => {
     slider.current.style.animationPlayState = "running";
   };
   return (
-    <div className="banner bg-[#050815]">
+    <div className="banner bg-[#050810]">
       <div
         className="slider"
         ref={slider}

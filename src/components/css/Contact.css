@@ -1,1 +1,37 @@
+/* Remove the white background when text is auto-filled or selected from suggestions */
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  background-color: #1f2937 !important; /* Match your input field background */
+  color: white !important;
+  -webkit-text-fill-color: white !important; /* Ensure text remains visible */
+  border: 1px solid #374151; /* Match your input border */
+  transition: background-color 5000s ease-in-out 0s; /* Prevent flashing */
+}
 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5); /* Match your focus ring */
+}
+
+/* Prevent appearance override */
+input,
+textarea {
+  -webkit-appearance: none; /* For Chrome/Safari */
+  appearance: none; /* For modern browsers */
+}
+
+form .submit input {
+  cursor: url(/src/assets/grab.svg) 15 15, move;
+}
+
+form label {
+  cursor: url(/src/assets/cursor.svg) 15 15, move;
+}
+
+.linksSection {
+  font-size: 20px;
+}
+
+.linksSection .items {
+  cursor: url(/src/assets/grab.svg) 15 15, pointer;
+}
