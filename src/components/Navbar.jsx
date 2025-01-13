@@ -77,7 +77,7 @@ const Navbar = () => {
           </a>
           <a
             className="flex-1 w-full flex items-center justify-center gap-8 text-4xl bg-gray-800 hover:bg-gray-700"
-            href="/../../public/react_php.pdf"
+            href="/react php.pdf"
             download
           >
             <img
