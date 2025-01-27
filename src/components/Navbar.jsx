@@ -22,13 +22,14 @@ const Navbar = () => {
   };
   return (
     <>
-      <nav className=" bg-[#14e956] flex justify-between px-20 text-2xl font-bold items-center h-[12vh] sticky top-0 z-10">
+      <nav className=" bg-[#14e956] flex justify-between px-[8vw] py-4 text-2xl font-bold items-center h-[12vh] sticky top-0 z-10">
         <div className="hover:scale-[1.01] transition-all logo h-[100%] text-white flex items-center">
-          <img className="h-[11vh] w-[11vh] rounded-xl" src={logo} alt="logo" />
+          <img className="h-[10vh] w-[10vh] rounded-xl" src={logo} alt="logo" />
         </div>
 
         <div className="hamburger hover:scale-105 transition-all">
           <img
+            className="h-[6vh] w-[6vh]"
             src={click ? cross : hamburger}
             alt="menu"
             onClick={(e) => {

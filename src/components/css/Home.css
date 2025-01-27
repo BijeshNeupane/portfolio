@@ -6,10 +6,6 @@
   outline: none;
 }
 
-.blurDiv {
-  background: rgba(0, 0, 0, 0.3);
-}
-
 .left .top {
   background: rgba(20, 233, 88, 0.2);
   word-spacing: 4px;
@@ -26,4 +22,66 @@
   color: #14e958;
   font-size: 2rem;
   font-weight: 800;
+}
+
+@media screen and (max-width: 950px) {
+  .blurDiv {
+    flex-direction: column-reverse;
+    padding: 50px 10vw;
+    gap: 10px;
+  }
+
+  .blurDiv .left,
+  .blurDiv .right {
+    width: 100%;
+    font-size: 1.25rem !important;
+  }
+
+  .blurDiv .left {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .blurDiv .right img {
+    height: 40vh;
+  }
+
+  .left .intro span {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+
+  .left .top {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+
+  .left .intro {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .blurDiv .right img {
+    height: 30vh;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .left .intro span {
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+
+  .left .top {
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+
+  .left .intro {
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
 }
