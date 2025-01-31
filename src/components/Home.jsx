@@ -4,24 +4,24 @@ import "./css/Home.css";
 import mainImage from "../assets/main1.svg";
 
 const Home = () => {
-  // useGSAP(() => {
-  //   gsap.from(".left", {
-  //     duration: 1.6,
-  //     x: -100,
-  //     opacity: 0,
-  //     delay: 6.4,
-  //     stagger: 0.4,
-  //     ease: "back.inOut",
-  //   });
-  //   gsap.from(".right", {
-  //     duration: 1.6,
-  //     x: 100,
-  //     opacity: 0,
-  //     delay: 6.4,
-  //     stagger: 0.4,
-  //     ease: "back.inOut",
-  //   });
-  // });
+  useGSAP(() => {
+    gsap.from(".left", {
+      duration: 1.6,
+      x: -100,
+      opacity: 0,
+      delay: 6.4,
+      stagger: 0.4,
+      ease: "back.inOut",
+    });
+    gsap.from(".right", {
+      duration: 1.6,
+      x: 100,
+      opacity: 0,
+      delay: 6.4,
+      stagger: 0.4,
+      ease: "back.inOut",
+    });
+  });
 
   return (
     <div className="bg blurDiv flex justify-around items-center inside min-h-[calc(100dvh-70px)] w-[100%] text-white">

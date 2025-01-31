@@ -16,7 +16,7 @@ const App = () => {
 
   return (
     <>
-      {/* {isLoading && <Loader onAnimationComplete={handleLoaderComplete} />} */}
+      {isLoading && <Loader onAnimationComplete={handleLoaderComplete} />}
       <Navbar />
       <Home />
       <Tools />
