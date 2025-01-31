@@ -33,7 +33,7 @@ const Tools = () => {
   });
 
   return (
-    <div className="toolSection min-h-[calc(100vh-10vh)] flex justify-center items-center bg-[#050810] text-[#14e958] flex-col gap-20">
+    <div className="toolSection py-5 min-h-[calc(100vh-10vh)] flex justify-center items-center bg-[#050810] text-[#14e958] flex-col gap-20">
       {/* Icons Section */}
       <div className="iconsForTools px-4 py-4 h-fit w-[80vw] rounded-lg bg-[#0c8c34] flex justify-center items-center gap-4 flex-wrap text-white text-2xl font-semibold">
         <div className="react naam">

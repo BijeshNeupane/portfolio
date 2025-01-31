@@ -9,6 +9,8 @@
 .left .top {
   background: rgba(20, 233, 88, 0.2);
   word-spacing: 4px;
+  font-size: 1.875rem;
+  margin-bottom: 10px;
 }
 
 .left .intro {
@@ -24,7 +26,91 @@
   font-weight: 800;
 }
 
-@media screen and (max-width: 950px) {
+.right img {
+  height: 300px;
+}
+
+@media screen and (max-width: 1167px) {
+  .left .top {
+    font-size: 1.6rem;
+  }
+
+  .left .intro {
+    font-size: 1.8rem;
+    line-height: 40px;
+  }
+
+  .left .intro span {
+    font-size: 1.8rem;
+  }
+
+  .right img {
+    height: 280px;
+  }
+}
+
+@media screen and (max-width: 1016px) {
+  .left .top {
+    font-size: 1.4rem;
+  }
+
+  .left .intro {
+    font-size: 1.6rem;
+    line-height: 35px;
+  }
+
+  .left .intro span {
+    font-size: 1.6rem;
+  }
+
+  .right img {
+    height: 260px;
+  }
+}
+
+@media screen and (max-width: 907px) {
+  .left .top {
+    font-size: 1.3rem;
+  }
+
+  .left .intro {
+    font-size: 1.5rem;
+    line-height: 32px;
+  }
+
+  .left .intro span {
+    font-size: 1.5rem;
+  }
+
+  .right img {
+    height: 240px;
+  }
+}
+
+@media screen and (max-width: 852px) {
+  .left .top {
+    font-size: 1.1rem;
+  }
+
+  .left .intro {
+    font-size: 1.3rem;
+    line-height: 32px;
+  }
+
+  .left .intro span {
+    font-size: 1.3rem;
+  }
+
+  .right img {
+    height: 240px;
+  }
+}
+
+@media screen and (max-width: 744px) {
+  .bg {
+    min-height: calc(100dvh - 60px);
+  }
+
   .blurDiv {
     flex-direction: column-reverse;
     padding: 50px 10vw;
@@ -34,7 +120,6 @@
   .blurDiv .left,
   .blurDiv .right {
     width: 100%;
-    font-size: 1.25rem !important;
   }
 
   .blurDiv .left {
@@ -44,28 +129,31 @@
   }
 
   .blurDiv .right img {
-    height: 40vh;
-  }
-
-  .left .intro span {
-    font-size: 1.4rem;
-    line-height: 2rem;
-  }
-
-  .left .top {
-    font-size: 1.4rem;
-    line-height: 2rem;
-  }
-
-  .left .intro {
-    font-size: 1.4rem;
-    line-height: 2rem;
+    height: 210px;
   }
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 480px) {
+  .left {
+    margin-top: -40px;
+  }
+
+  .left .top {
+    font-size: 1.05rem;
+    margin-bottom: 6px;
+  }
+
+  .left .intro {
+    font-size: 1.3rem;
+    line-height: 28px;
+  }
+
+  .left .intro span {
+    font-size: 1.13rem;
+  }
+
   .blurDiv .right img {
-    height: 30vh;
+    height: 160px;
   }
 }
 
@@ -76,7 +164,7 @@
   }
 
   .left .top {
-    font-size: 1rem;
+    font-size: 0.9rem;
     line-height: 1.6rem;
   }
 

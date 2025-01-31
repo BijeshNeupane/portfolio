@@ -1,0 +1,32 @@
+.mathi .text-individual {
+  font-weight: 800;
+  font-size: 20vw;
+}
+
+@media screen and (max-width: 1024px) {
+  .mathi .text-individual {
+    font-size: 16vw;
+    font-weight: 700;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mathi .text-individual {
+    font-size: 14vw;
+    font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .mathi .text-individual {
+    font-size: 12vw;
+    font-weight: 400;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .mathi .text-individual {
+    font-size: 11vw;
+    font-weight: lighter;
+  }
+}

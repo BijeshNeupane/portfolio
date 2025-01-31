@@ -22,14 +22,14 @@ const Navbar = () => {
   };
   return (
     <>
-      <nav className=" bg-[#14e956] flex justify-between px-[8vw] py-4 text-2xl font-bold items-center h-[12vh] sticky top-0 z-10">
-        <div className="hover:scale-[1.01] transition-all logo h-[100%] text-white flex items-center">
-          <img className="h-[10vh] w-[10vh] rounded-xl" src={logo} alt="logo" />
+      <nav className="bg-[#14e956] flex justify-between px-[8vw] py-4 text-2xl font-bold items-center sticky top-0 z-10">
+        <div className="logo hover:scale-[1.01] transition-all logo h-[100%] text-white flex items-center">
+          <img className="h-[65px] w-[65px] rounded-xl" src={logo} alt="logo" />
         </div>
 
         <div className="hamburger hover:scale-105 transition-all">
           <img
-            className="h-[6vh] w-[6vh]"
+            className="h-[40px] w-[40px]"
             src={click ? cross : hamburger}
             alt="menu"
             onClick={(e) => {
@@ -37,8 +37,9 @@ const Navbar = () => {
             }}
           />
         </div>
+
         <div
-          className="menu gayab flex flex-col items-center justify-center h-[88vh] w-screen bg-[#050810] absolute top-[12vh] left-0 text-white"
+          className="menu gayab flex flex-col items-center justify-center h-[88vh] w-screen bg-[#050810] absolute left-0 text-white"
           ref={menu}
           style={{ "--quantity": 3 }}
         >
