@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import "./css/Loader.css";
+import "./css/Loaders.css";
 
 const Loader = ({ onAnimationComplete }) => {
   useGSAP(() => {
