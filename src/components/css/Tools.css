@@ -15,6 +15,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex: 1/4;
   gap: 10px;
   height: 80px;
   width: 280px;
@@ -30,4 +31,20 @@
 
 .tools {
   letter-spacing: 2px;
+}
+
+@media screen and (max-width: 760px) {
+  .naam {
+    height: 60px;
+    width: 100px;
+  }
+  .naam h1 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 744px) {
+  .toolSection {
+    height: calc(100dvh - 60px);
+  }
 }

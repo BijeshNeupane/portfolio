@@ -40,10 +40,6 @@ nav {
 }
 
 @media screen and (max-width: 460px) {
-  nav {
-    height: 50px;
-  }
-
   .gayab {
     top: 50px;
     height: calc(100vh - 50px);

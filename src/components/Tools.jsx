@@ -24,8 +24,8 @@ const Tools = () => {
         rotate: 90,
         scrollTrigger: {
           trigger: ".toolSection",
-          start: "top 80%",
-          end: "top 10%",
+          start: "top 60%",
+          end: "top 0%",
         },
       });
     });
@@ -33,7 +33,12 @@ const Tools = () => {
   });
 
   return (
-    <div className="toolSection py-5 min-h-[calc(100vh-10vh)] flex justify-center items-center bg-[#050810] text-[#14e958] flex-col gap-20">
+    <div className="toolSection py-[80px] min-h-[calc(100dvh-70px)] flex justify-center items-center bg-[#050810] text-[#14e958] flex-col gap-20">
+      {/* Tools Header */}
+      <div className="tools text-[35px] font-bold bg-[#12141d] px-6 py-3 rounded-lg">
+        <h1>Tooling</h1>
+      </div>
+
       {/* Icons Section */}
       <div className="iconsForTools px-4 py-4 h-fit w-[80vw] rounded-lg bg-[#0c8c34] flex justify-center items-center gap-4 flex-wrap text-white text-2xl font-semibold">
         <div className="react naam">
@@ -68,10 +73,6 @@ const Tools = () => {
           <h1>Tailwind</h1>
           <img src={tailwindLogo} alt="React Logo" />
         </div>
-      </div>
-      {/* Tools Header */}
-      <div className="tools text-[35px] font-bold bg-[#12141d] px-6 py-3 rounded-lg">
-        <h1>Tools</h1>
       </div>
     </div>
   );

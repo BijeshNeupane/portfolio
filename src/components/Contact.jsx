@@ -27,11 +27,11 @@ const Contact = () => {
   };
 
   return (
-    <div className="overflow-hidden bg-[#050810] min-h-[calc(100vh-10vh)] flex flex-col justify-center items-center relative">
+    <div className="base bg-[#050810]  flex flex-col justify-between pt-[40px] gap-[50px] items-center">
       <form
         ref={form}
         onSubmit={sendEmail}
-        className="bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-md space-y-6 mt-[-55px]"
+        className="bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-md space-y-6 mx-[20px]"
       >
         <h2 className="text-3xl font-bold text-center text-[#14e958]">
           Get in touch
@@ -93,7 +93,7 @@ const Contact = () => {
         </div>
       </form>
 
-      <div className="linksSection flex bg-red-50 w-full absolute bottom-0">
+      <div className="linksSection flex bg-red-50 w-full ">
         <div className="items github flex-1 bg-[#010400] hover:bg-gray-900">
           <a
             href="https://github.com/noobmaster6469"
@@ -101,7 +101,7 @@ const Contact = () => {
             className="px-6 py-5 flex items-center justify-center gap-4 text-gray-100 font-semibold transition "
           >
             <img src={githubLogo} alt="Github Logo" />
-            GitHub
+            <span>GitHub</span>
           </a>
         </div>
         <div className="items linkedin flex-1 bg-[#0A66C2] hover:bg-[#164778]">
@@ -112,7 +112,7 @@ const Contact = () => {
             className="gap-4 px-6 py-5 flex items-center justify-center text-gray-100 font-semibold transition"
           >
             <img src={linkedinLogo} alt="Github Logo" />
-            LinkedIn
+            <span>LinkedIn</span>
           </a>
         </div>
         <div className="items X flex-1 bg-[#000000] hover:bg-gray-900">
@@ -123,7 +123,7 @@ const Contact = () => {
             className="px-6 py-5 gap-4 flex items-center justify-center text-gray-100 font-semibold transition"
           >
             <img src={XLogo} alt="Github Logo" />
-            Twitter
+            <span>Twitter</span>
           </a>
         </div>
         <div className="items downloadCV flex-1 bg-gray-800 hover:bg-gray-700 w-full">
@@ -133,7 +133,7 @@ const Contact = () => {
             className="gap-4 px-6 py-5 flex items-center justify-center text-gray-100 font-semibold transition"
           >
             <img src={CVLogo} alt="Github Logo" />
-            Download CV
+            <span>Download CV</span>
           </a>
         </div>
       </div>

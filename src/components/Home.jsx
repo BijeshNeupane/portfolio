@@ -4,28 +4,28 @@ import "./css/Home.css";
 import mainImage from "../assets/main1.svg";
 
 const Home = () => {
-  useGSAP(() => {
-    gsap.from(".left", {
-      duration: 1.6,
-      x: -100,
-      opacity: 0,
-      delay: 6.4,
-      stagger: 0.4,
-      ease: "back.inOut",
-    });
-    gsap.from(".right", {
-      duration: 1.6,
-      x: 100,
-      opacity: 0,
-      delay: 6.4,
-      stagger: 0.4,
-      ease: "back.inOut",
-    });
-  });
+  // useGSAP(() => {
+  //   gsap.from(".left", {
+  //     duration: 1.6,
+  //     x: -100,
+  //     opacity: 0,
+  //     delay: 6.4,
+  //     stagger: 0.4,
+  //     ease: "back.inOut",
+  //   });
+  //   gsap.from(".right", {
+  //     duration: 1.6,
+  //     x: 100,
+  //     opacity: 0,
+  //     delay: 6.4,
+  //     stagger: 0.4,
+  //     ease: "back.inOut",
+  //   });
+  // });
 
   return (
-    <div className="bg blurDiv flex justify-around items-center inside min-h-[calc(100dvh-70px)] w-[100%] text-white">
-      <div className="left w-[50vw] flex flex-col">
+    <div className="bg flex justify-center gap-1 items-center inside w-[100%] text-white px-4">
+      <div className="left w-1/2 flex flex-col  ">
         <div className="top w-[fit-content] pr-3 pl-1 py-1 rounded-md text-[#14e959] flex items-center justify-center font-extrabold">
           <span className="emoji text-[#500082] flex items-center ">✌🏻</span>
           Hi There! I'm Bijesh
@@ -37,7 +37,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="right flex items-center justify-center mb-0">
+      <div className="right flex items-center justify-center ">
         <img
           src={mainImage}
           alt="Illustration of Bijesh Neupane"

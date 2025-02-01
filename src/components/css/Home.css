@@ -4,6 +4,8 @@
   background-position: center;
   border: none;
   outline: none;
+  min-height: calc(100dvh - 70px);
+  gap: 80px;
 }
 
 .left .top {
@@ -62,10 +64,6 @@
   .left .intro span {
     font-size: 1.6rem;
   }
-
-  .right img {
-    height: 260px;
-  }
 }
 
 @media screen and (max-width: 907px) {
@@ -83,93 +81,67 @@
   }
 
   .right img {
-    height: 240px;
-  }
-}
-
-@media screen and (max-width: 852px) {
-  .left .top {
-    font-size: 1.1rem;
-  }
-
-  .left .intro {
-    font-size: 1.3rem;
-    line-height: 32px;
-  }
-
-  .left .intro span {
-    font-size: 1.3rem;
-  }
-
-  .right img {
-    height: 240px;
+    height: 260px;
   }
 }
 
 @media screen and (max-width: 744px) {
   .bg {
     min-height: calc(100dvh - 60px);
-  }
-
-  .blurDiv {
     flex-direction: column-reverse;
     padding: 50px 10vw;
-    gap: 10px;
+    gap: 50px;
   }
 
-  .blurDiv .left,
-  .blurDiv .right {
+  .bg .left,
+  .bg .right {
     width: 100%;
   }
 
-  .blurDiv .left {
+  .bg .left {
     align-items: center;
     justify-content: center;
     text-align: center;
   }
 
-  .blurDiv .right img {
-    height: 210px;
+  .bg .right img {
+    height: 220px;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .left {
-    margin-top: -40px;
-  }
-
   .left .top {
-    font-size: 1.05rem;
-    margin-bottom: 6px;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
   }
 
   .left .intro {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     line-height: 28px;
   }
 
   .left .intro span {
-    font-size: 1.13rem;
+    font-size: 1.4rem;
   }
 
-  .blurDiv .right img {
-    height: 160px;
+  .bg .right img {
+    height: 200px;
   }
 }
 
 @media screen and (max-width: 400px) {
   .left .intro span {
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.6rem;
   }
 
   .left .top {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     line-height: 1.6rem;
   }
 
   .left .intro {
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.6rem;
   }
 }

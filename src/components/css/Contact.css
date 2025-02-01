@@ -35,3 +35,51 @@ form label {
 .linksSection .items {
   cursor: url(/src/assets/grab.svg) 15 15, pointer;
 }
+
+.base {
+  min-height: calc(100dvh - 70px);
+}
+
+@media screen and (max-width: 1025px) {
+  .base {
+    min-height: fit-content;
+  }
+}
+
+@media screen and (max-width: 1012px) {
+  .linksSection {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 744px) {
+  .linksSection span {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .base form h2 {
+    font-size: 25px;
+  }
+
+  .base form {
+    font-size: 12px;
+  }
+
+  .base form label {
+    font-size: 12px;
+  }
+
+  .base form .submit {
+    font-size: 12px;
+  }
+
+  .base form {
+    width: 80%;
+  }
+
+  .linksSection .items {
+    padding: 2px 5px;
+  }
+}
