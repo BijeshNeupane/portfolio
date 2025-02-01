@@ -1,28 +1,74 @@
 import React, { useRef } from "react";
 import "./css/Projects.css";
 
-import car1 from "../assets/car1.jpeg";
-import car2 from "../assets/car2.jpeg";
-import car3 from "../assets/car3.jpeg";
+import todo from "../assets/images/todo-simple.png";
+import weather from "../assets/images/weather.jpg";
+import bmi from "../assets/images/BMI-calculator.jpg";
+import rockPaperScissor from "../assets/images/rockPaperScissor.jpg";
 
 const Projects = () => {
-  let imageContainerRef = useRef(null);
+  const imageContainerRef = useRef(null);
 
-  const images = [car1, car2, car3];
+  const images = [
+    {
+      name: todo,
+      redirect: "https://noobmaster6469.github.io/11.to-do/",
+    },
+    {
+      name: weather,
+      redirect: "https://noobmaster6469.github.io/Weather/",
+    },
+    {
+      name: bmi,
+      redirect: "#",
+    },
+    {
+      name: rockPaperScissor,
+      redirect: "#",
+    },
+  ];
 
-  const prev = () => (imageContainerRef.current.scrollLeft -= 250);
+  const prev = () => {
+    if (imageContainerRef.current) {
+      const imageWidth = imageContainerRef.current.firstChild.offsetWidth;
+      imageContainerRef.current.scrollLeft -= imageWidth;
+    }
+  };
 
-  const next = () => (imageContainerRef.current.scrollLeft += 250);
+  const next = () => {
+    if (imageContainerRef.current) {
+      const imageWidth = imageContainerRef.current.firstChild.offsetWidth;
+      imageContainerRef.current.scrollLeft += imageWidth;
+    }
+  };
+
   return (
-    <div className="page-container">
-      <div className="content">
-        <div className="prev" onClick={prev}></div>
-        <div className="slide-panel" ref={imageContainerRef}>
+    <div className="page-container flex flex-col justify-center px-8 py-10">
+      <div className="projects text-[35px] text-[#14e958] font-bold bg-[#12141d] px-6 py-3 rounded-lg">
+        <h1>Projects</h1>
+      </div>
+      <div className="content flex items-center gap-4">
+        <div className="prev cursor-pointer" onClick={prev}></div>
+        <div
+          className="slide-panel flex overflow-x-auto"
+          ref={imageContainerRef}
+        >
           {images.map((image, index) => (
-            <img src={image} alt={`image${index + 1}`} />
+            <a
+              href={image.redirect}
+              key={index}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={image.name}
+                alt={`Project ${index + 1}`}
+                className="w-48 h-32 mx-2 rounded-lg shadow-md"
+              />
+            </a>
           ))}
         </div>
-        <div className="next" onClick={next}></div>
+        <div className="next cursor-pointer" onClick={next}></div>
       </div>
     </div>
   );

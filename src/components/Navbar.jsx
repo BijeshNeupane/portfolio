@@ -39,7 +39,7 @@ const Navbar = () => {
         </div>
 
         <div
-          className="menu gayab flex flex-col items-center justify-center h-[88vh] w-screen bg-[#050810] absolute left-0 text-white"
+          className="menu gayab flex flex-col items-center justify-center h-[calc(100dvh-70px)] w-screen bg-[#050810] absolute left-0 text-white"
           ref={menu}
           style={{ "--quantity": 3 }}
         >

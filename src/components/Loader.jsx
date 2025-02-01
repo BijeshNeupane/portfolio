@@ -54,7 +54,10 @@ const Loader = ({ onAnimationComplete }) => {
 
     tl.to(".mathi", {
       display: "none",
-      onComplete: onAnimationComplete, // Callback to notify when the animation is done
+      onComplete: () => {
+        onAnimationComplete();
+        document.body.style.overflow = "auto"; // Re-enable scrolling
+      }, // Callback to notify when the animation is done
     });
 
     return () => {
@@ -64,7 +67,7 @@ const Loader = ({ onAnimationComplete }) => {
 
   const name = "BIJESH";
   return (
-    <div className="mathi h-[100vh] w-[100vw] flex justify-center items-center fixed top-0 left-0 z-[9999] right-0 bg-black text-white overflow-hidden scroll-m-0 tracking-[2vh] px-10 py-20">
+    <div className="mathi min-h-[100dvh] min-w-[100vw] flex justify-center items-center fixed top-0 left-0 z-[9999]  bg-black text-white overflow-hidden scroll-m-0 px-10 py-20">
       {name.split("").map((char, index) => (
         <span key={index} className="text-individual text-transparent">
           {char}
