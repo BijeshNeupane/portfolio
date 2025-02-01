@@ -3,8 +3,8 @@ import Home from "./components/Home";
 import Loader from "./components/Loader";
 import Navbar from "./components/Navbar";
 import Tools from "./components/Tools";
-import Slider from "./components/Slider";
 import Contact from "./components/Contact";
+import Projects from "./components/Projects";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -16,11 +16,11 @@ const App = () => {
 
   return (
     <>
-      {/* {isLoading && <Loader onAnimationComplete={handleLoaderComplete} />} */}
+      {isLoading && <Loader onAnimationComplete={handleLoaderComplete} />}
       <Navbar />
       <Home />
       <Tools />
-      <Slider />
+      <Projects />
       <Contact />
     </>
   );
