@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Tools from "./components/Tools";
 import Contact from "./components/Contact";
 import Projects from "./components/Projects";
+import Slider from "./components/Slider";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -20,7 +21,8 @@ const App = () => {
       <Navbar />
       <Home />
       <Tools />
-      <Projects />
+      {/* <Projects /> */}
+      <Slider />
       <Contact />
     </>
   );

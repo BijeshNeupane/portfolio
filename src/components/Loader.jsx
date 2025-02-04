@@ -31,14 +31,6 @@ const Loader = ({ onAnimationComplete }) => {
     });
 
     tl.to(".text-individual", {
-      duration: 1,
-      textShadow: "1px 1px 16px #14e956",
-      repeat: 2,
-      yoyo: true,
-      ease: "power1.inOut",
-    });
-
-    tl.to(".text-individual", {
       y: -100,
       duration: 1,
       opacity: 0,

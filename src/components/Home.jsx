@@ -6,18 +6,18 @@ import mainImage from "../assets/main1.svg";
 const Home = () => {
   useGSAP(() => {
     gsap.from(".left", {
-      duration: 1.6,
+      duration: 1.5,
       x: -100,
       opacity: 0,
-      delay: 6.4,
+      delay: 6,
       stagger: 0.4,
       ease: "back.inOut",
     });
     gsap.from(".right", {
-      duration: 1.6,
+      duration: 1.5,
       x: 100,
       opacity: 0,
-      delay: 6.4,
+      delay: 6,
       stagger: 0.4,
       ease: "back.inOut",
     });

@@ -19,9 +19,8 @@ const Tools = () => {
   useGSAP(() => {
     const ctx = gsap.context(() => {
       gsap.from(".iconsForTools", {
-        duration: 1,
+        duration: 0.6,
         scale: 0,
-        rotate: 90,
         scrollTrigger: {
           trigger: ".toolSection",
           start: "top 60%",
