@@ -5,6 +5,7 @@ import githubLogo from "../assets/github-logo.svg";
 import linkedinLogo from "../assets/linkedin-logo.svg";
 import XLogo from "../assets/x-logo.svg";
 import CVLogo from "../assets/cv-logo.svg";
+import toast, { Toaster } from "react-hot-toast";
 
 const Contact = () => {
   const form = useRef();
@@ -18,7 +19,9 @@ const Contact = () => {
       })
       .then(
         () => {
-          alert("SUCCESS!");
+          toast("Good Job!", {
+            icon: "👏",
+          });
         },
         (error) => {
           alert("FAILED...", error.text);
