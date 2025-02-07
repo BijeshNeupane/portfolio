@@ -131,7 +131,7 @@ const Contact = () => {
         </div>
         <div className="items downloadCV flex-1 bg-gray-800 hover:bg-gray-700 w-full">
           <a
-            href="/react_php.pdf"
+            href="/../../../Resume.pdf"
             download
             className="gap-4 px-6 py-5 flex items-center justify-center text-gray-100 font-semibold transition"
           >
