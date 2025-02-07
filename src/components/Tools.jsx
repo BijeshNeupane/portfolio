@@ -26,7 +26,6 @@ const Tools = () => {
           trigger: ".toolSection",
           start: "top 60%",
           end: "top 60%",
-          markers: true,
         },
       });
     });
