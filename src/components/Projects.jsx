@@ -5,7 +5,7 @@ import todo from "../assets/images/todo-simple.png";
 import weather from "../assets/images/weather.jpg";
 import bmi from "../assets/images/BMI-calculator.jpg";
 import rockPaperScissor from "../assets/images/rockPaperScissor.jpg";
-import chatApplication from "../assets/images/chatApp.jpg";
+import chatApp from "../assets/images/chatApp.jpg";
 
 const Projects = () => {
   const imageContainerRef = useRef(null);
@@ -73,7 +73,9 @@ const Projects = () => {
             </a>
           ))}
         </div>
-        <div className="next cursor-pointer" onClick={next}></div>
+        <div className="next cursor-pointer" onClick={next}>
+          <h1 className="text-white">goooooo</h1>
+        </div>
       </div>
     </div>
   );

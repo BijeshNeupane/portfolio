@@ -4,6 +4,7 @@ import todo from "../assets/images/todo-simple.png";
 import weather from "../assets/images/weather.jpg";
 import bmi from "../assets/images/BMI-calculator.jpg";
 import rockPaperScissor from "../assets/images/rockPaperScissor.jpg";
+import chatApp from "../assets/images/chatApp.jpg";
 const description = [];
 
 const Slider = () => {
@@ -27,6 +28,11 @@ const Slider = () => {
       name: rockPaperScissor,
       redirect: "#",
       description: "Rock Paper Scissor game ",
+    },
+    {
+      name: chatApp,
+      redirect: "https://mern-stack-chat-app-8kb4.onrender.com/login",
+      description: "Chat App",
     },
   ];
   const slider = useRef(null);
