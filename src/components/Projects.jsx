@@ -5,6 +5,7 @@ import todo from "../assets/images/todo-simple.png";
 import weather from "../assets/images/weather.jpg";
 import bmi from "../assets/images/BMI-calculator.jpg";
 import rockPaperScissor from "../assets/images/rockPaperScissor.jpg";
+import chatApplication from "../assets/images/chatApp.jpg";
 
 const Projects = () => {
   const imageContainerRef = useRef(null);
@@ -17,6 +18,10 @@ const Projects = () => {
     {
       name: weather,
       redirect: "https://noobmaster6469.github.io/Weather/",
+    },
+    {
+      name: chatApp,
+      redirect: "https://mern-stack-chat-app-8kb4.onrender.com/login",
     },
     {
       name: bmi,
