@@ -19,9 +19,7 @@ const Contact = () => {
       })
       .then(
         () => {
-          toast("Good Job!", {
-            icon: "👏",
-          });
+          toast.success("Email sent successfully");
         },
         (error) => {
           alert("FAILED...", error.text);
