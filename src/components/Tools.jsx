@@ -40,7 +40,7 @@ const Tools = () => {
       </div>
 
       {/* Icons Section */}
-      <div className="iconsForTools px-4 py-4 h-fit w-[80vw] rounded-lg bg-[#0c8c34] flex justify-center items-center gap-4 flex-wrap text-white text-2xl font-semibold">
+      <div className="iconsForTools px-4 py-4 w-[80vw] rounded-lg bg-[#0c8c34] flex justify-center items-center gap-4 flex-wrap text-white text-2xl font-semibold">
         <motion.div
           drag
           whileDrag={{
