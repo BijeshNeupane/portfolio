@@ -1,145 +1,141 @@
-import React, { useRef } from "react";
-import "./css/Contact.css";
+import React, { useRef, useState } from "react";
+import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
-import githubLogo from "../assets/github-logo.svg";
-import linkedinLogo from "../assets/linkedin-logo.svg";
-import XLogo from "../assets/x-logo.svg";
-import CVLogo from "../assets/cv-logo.svg";
-import toast, { Toaster } from "react-hot-toast";
+import { toast } from "react-hot-toast";
+
+import { styles } from "../styles";
+import { EarthCanvas } from "./canvas";
+import { SectionWrapper } from "../hoc";
+import { slideIn } from "../utils/motion";
 
 const Contact = () => {
-  const form = useRef();
+  const formRef = useRef();
+  const [form, setForm] = useState({
+    from_name: "",
+    from_email: "",
+    message: "",
+  });
 
-  const sendEmail = (e) => {
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    const { target } = e;
+    const { name, value } = target;
+
+    setForm({
+      ...form,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = (e) => {
     e.preventDefault();
+    setLoading(true);
 
+    emailjs;
     emailjs
-      .sendForm("service_vf811k4", "template_34jwk1g", form.current, {
-        publicKey: "BRxRy38TrzkilDwm1",
-      })
+      .sendForm(
+        "service_vf811k4", //  your Service ID
+        "template_34jwk1g", //  your Template ID
+        formRef.current, //  your form reference
+        "2pr6l7z_mgKftlRZM" //  your Public Key (user ID in v3)
+      )
       .then(
         () => {
-          toast.success("Email sent successfully");
+          setLoading(false);
+          toast.success("Email sent successfully!");
+          setForm({
+            from_name: "",
+            from_email: "",
+            message: "",
+          });
         },
         (error) => {
-          alert("FAILED...", error.text);
+          setLoading(false);
+          toast.error("Failed to send email: " + error.text);
+          console.error("EmailJS error:", error);
         }
       );
   };
 
   return (
-    <div className="base bg-[#050810]  flex flex-col justify-between pt-[40px] gap-[50px] items-center">
-      <form
-        ref={form}
-        onSubmit={sendEmail}
-        className="bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-md space-y-6 mx-[20px]"
+    <div
+      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
+    >
+      <motion.div
+        variants={slideIn("left", "tween", 0.2, 1)}
+        className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
       >
-        <h2 className="text-3xl font-bold text-center text-[#14e958]">
-          Get in touch
-        </h2>
-        <div className="name">
-          <label
-            htmlFor="from_name"
-            className="block text-sm font-medium text-gray-100"
-          >
-            Name
-          </label>
-          <input
-            type="text"
-            id="from_name"
-            name="from_name"
-            required
-            className="w-full px-4 py-2 mt-1 bg-gray-900 text-white border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
-            placeholder="Enter your name"
-          />
-        </div>
-        <div className="email">
-          <label
-            htmlFor="from_email"
-            className="block text-sm font-medium text-gray-100"
-          >
-            Email
-          </label>
-          <input
-            type="email"
-            id="from_email"
-            name="from_email"
-            required
-            className="w-full px-4 py-2 mt-1 bg-gray-900 text-white border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-non"
-            placeholder="Enter your email"
-          />
-        </div>
-        <div className="message">
-          <label
-            htmlFor="message"
-            className="block text-sm font-medium text-gray-100"
-          >
-            Message
-          </label>
-          <textarea
-            id="message"
-            name="message"
-            required
-            className="w-full px-4 py-2 mt-1 bg-gray-900 text-white border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
-            placeholder="Write your message"
-            rows="4"
-          />
-        </div>
-        <div className="submit">
-          <input
-            type="submit"
-            value="Send"
-            className="w-full py-2 text-sm font-semibold text-white bg-[#198f1f] rounded-lg hover:bg-[#1e6922] focus:ring-4 focus:ring-blue-500 focus:outline-none"
-          />
-        </div>
-      </form>
+        <p className={styles.sectionSubText}>Get in touch</p>
+        <h3 className={styles.sectionHeadText}>Contact.</h3>
 
-      <div className="linksSection flex bg-red-50 w-full ">
-        <div className="items github flex-1 bg-[#010400] hover:bg-gray-900">
-          <a
-            href="https://github.com/noobmaster6469"
-            target="_blank"
-            className="px-6 py-5 flex items-center justify-center gap-4 text-gray-100 font-semibold transition "
-          >
-            <img src={githubLogo} alt="Github Logo" />
-            <span>GitHub</span>
-          </a>
-        </div>
-        <div className="items linkedin flex-1 bg-[#0A66C2] hover:bg-[#164778]">
-          <a
-            href="https://www.linkedin.com/in/bijesh-neupane-24665a237/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="gap-4 px-6 py-5 flex items-center justify-center text-gray-100 font-semibold transition"
-          >
-            <img src={linkedinLogo} alt="Github Logo" />
-            <span>LinkedIn</span>
-          </a>
-        </div>
-        <div className="items X flex-1 bg-[#000000] hover:bg-gray-900">
-          <a
-            href="https://x.com/NMaster016"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-6 py-5 gap-4 flex items-center justify-center text-gray-100 font-semibold transition"
-          >
-            <img src={XLogo} alt="Github Logo" />
-            <span>Twitter</span>
-          </a>
-        </div>
-        <div className="items downloadCV flex-1 bg-gray-800 hover:bg-gray-700 w-full">
-          <a
-            href="/../../../Resume.pdf"
-            download
-            className="gap-4 px-6 py-5 flex items-center justify-center text-gray-100 font-semibold transition"
-          >
-            <img src={CVLogo} alt="Github Logo" />
-            <span>Download CV</span>
-          </a>
-        </div>
-      </div>
+        <form
+          ref={formRef}
+          onSubmit={handleSubmit}
+          className="mt-12 flex flex-col gap-8"
+        >
+          <label className="flex flex-col">
+            <span className="text-white font-medium mb-4">Your Name</span>
+            <input
+              type="text"
+              name="from_name"
+              id="from_name"
+              value={form.from_name}
+              onChange={handleChange}
+              placeholder="What's your good name?"
+              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+            />
+          </label>
+          <label className="flex flex-col">
+            <span className="text-white font-medium mb-4">Your email</span>
+            <input
+              type="email"
+              name="from_email"
+              id="from_email"
+              value={form.from_email}
+              onChange={handleChange}
+              placeholder="What's your web address?"
+              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+            />
+          </label>
+          <label className="flex flex-col">
+            <span className="text-white font-medium mb-4">Your Message</span>
+            <textarea
+              rows={7}
+              name="message"
+              id="message"
+              value={form.message}
+              onChange={handleChange}
+              placeholder="What you want to say?"
+              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+            />
+          </label>
+          <div className="flex justify-between">
+            <button
+              type="submit"
+              className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
+            >
+              {loading ? "Sending..." : "Send"}
+            </button>
+            <a
+              href="/Resume.pdf"
+              download
+              className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
+            >
+              Download CV
+            </a>
+          </div>
+        </form>
+      </motion.div>
+
+      <motion.div
+        variants={slideIn("right", "tween", 0.2, 1)}
+        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
+      >
+        <EarthCanvas />
+      </motion.div>
     </div>
   );
 };
 
-export default Contact;
+export default SectionWrapper(Contact, "contact");
