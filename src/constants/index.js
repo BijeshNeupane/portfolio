@@ -26,7 +26,7 @@ import {
   chatapp,
   ecommerce,
   pollapp,
-  movieapp,
+  movieApp,
 } from "../assets";
 
 export const navLinks = [
