@@ -35,7 +35,7 @@ import tripguide from "./tripguide.png";
 import chatapp from "./chatapp.png";
 import ecommerce from "./ecommerce.png";
 import pollapp from "./pollapp.png";
-import movieapp from "./movieapp.png";
+import movieapp from "./movieApp.png";
 import typescript from "./tech/typescript.png";
 
 export {
