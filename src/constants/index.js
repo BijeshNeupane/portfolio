@@ -20,11 +20,13 @@ import {
   tripguide,
   threejs,
   newsummit,
+  volgai,
   csharp,
   dotnet,
   chatapp,
   ecommerce,
   pollapp,
+  movieapp,
 } from "../assets";
 
 export const navLinks = [
@@ -75,8 +77,8 @@ const technologies = [
     icon: javascript,
   },
   {
-    name: "C#",
-    icon: csharp,
+    name: "TypeScript",
+    icon: typescript,
   },
   {
     name: "React JS",
@@ -110,10 +112,6 @@ const technologies = [
     name: "figma",
     icon: figma,
   },
-  {
-    name: ".NET",
-    icon: dotnet,
-  },
 ];
 
 const experiences = [
@@ -128,6 +126,19 @@ const experiences = [
       "Collaborating with cross-functional teams including designers, product managers, and backend developers to create high-quality products.",
       "Implementing responsive design and ensuring cross-browser compatibility.",
       "Participating in code reviews and providing constructive feedback to other developers.",
+    ],
+  },
+  {
+    title: "nextjs Intern",
+    company_name: "Volgai",
+    icon: volgai,
+    iconBg: "#3284a4",
+    date: "May 2025 - September 2025",
+    points: [
+      "Assisting in the development and maintenance of web applications using technologies such as nextjs and tailwindcss.",
+      "Collaborating with senior developers and designers to translate UI/UX wireframes into interactive user interfaces.",
+      "Writing clean, reusable, and efficient code while following industry best practices.",
+      "Doing optimization of website for better performance.",
     ],
   },
 ];
@@ -183,8 +194,31 @@ const projects = [
       },
     ],
     image: chatapp,
-    source_code_link: "https://github.com/noobmaster6469/MERN-stack-chat-app",
+    source_code_link: "https://github.com/BijeshNeupane/MERN-stack-chat-app",
     project_link: "https://mern-stack-chat-app-8kb4.onrender.com/",
+  },
+  {
+    name: "Movie App",
+    description:
+      "A web-based app for viewing movie and recommendations based on user preferences.",
+    tags: [
+      {
+        name: "nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "green-text-gradient",
+      },
+      {
+        name: "typescript",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: movieapp,
+    source_code_link:
+      "https://github.com/BijeshNeupane/movie-recommedation-system",
+    project_link: "https://movie-recommedation-system-two.vercel.app/",
   },
   {
     name: "Polling app",
@@ -205,32 +239,10 @@ const projects = [
       },
     ],
     image: pollapp,
-    source_code_link: "https://github.com/noobmaster6469/polling-system",
+    source_code_link: "https://github.com/BijeshNeupane/polling-system",
     project_link: "https://pollappselfhosted.onrender.com/",
   },
-  {
-    name: "Ecommerce Website",
-    description:
-      "A comprehensive Ecommerce website specially designed for musical instruments (ongoing project).",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "nodejs",
-        color: "green-text-gradient",
-      },
-      {
-        name: "zutsand",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: ecommerce,
-    source_code_link:
-      "https://github.com/noobmaster6469/ecommerceCollgeProject",
-    project_link: "https://ecommercecollgeproject.onrender.com/",
-  },
+  
 ];
 
 export { services, technologies, experiences, testimonials, projects };

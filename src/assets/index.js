@@ -18,7 +18,6 @@ import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
-import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 import csharp from "./tech/csharp.png";
 import dotnet from "./tech/dotnet.png";
@@ -28,6 +27,7 @@ import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 import newsummit from "./newsummit.png";
+import volgai from "./volgai.jpg";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -35,6 +35,8 @@ import tripguide from "./tripguide.png";
 import chatapp from "./chatapp.png";
 import ecommerce from "./ecommerce.png";
 import pollapp from "./pollapp.png";
+import movieapp from "./movieapp.png";
+import typescript from "./tech/typescript.png";
 
 export {
   logo,
@@ -56,7 +58,6 @@ export {
   reactjs,
   redux,
   tailwind,
-  typescript,
   threejs,
   meta,
   shopify,
@@ -69,6 +70,9 @@ export {
   jobit,
   tripguide,
   newsummit,
+  volgai,
   csharp,
   dotnet,
+  movieapp,
+  typescript
 };
