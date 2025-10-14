@@ -19,6 +19,10 @@
   display: block;
 }
 
+:root {
+  --chat--input--text-color: black;
+}
+
 .black-gradient {
   background: #000000; /* fallback for old browsers */
   background: -webkit-linear-gradient(
