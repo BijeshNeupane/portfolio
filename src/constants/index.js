@@ -27,6 +27,7 @@ import {
   ecommerce,
   pollapp,
   movieapp,
+  pasale,
 } from "../assets";
 
 export const navLinks = [
@@ -221,28 +222,22 @@ const projects = [
     project_link: "https://movie-recommedation-system-two.vercel.app/",
   },
   {
-    name: "Polling app",
-    description:
-      "Web application that allows Admin to create polls and users to vote on them.",
+    name: "Ecommerce App",
+    description: "A full fledged multi-vendor ecommerce web application.",
     tags: [
       {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "nodejs",
+        name: "nextjs",
         color: "green-text-gradient",
       },
       {
-        name: "daisyui",
-        color: "pink-text-gradient",
+        name: "tailwind",
+        color: "blue-text-gradient",
       },
     ],
-    image: pollapp,
-    source_code_link: "https://github.com/BijeshNeupane/polling-system",
-    project_link: "https://pollappselfhosted.onrender.com/",
+    image: pasale,
+    source_code_link: "https://github.com/BijeshNeupane/Pasale",
+    project_link: "https://pasale.vercel.app/",
   },
-  
 ];
 
 export { services, technologies, experiences, testimonials, projects };
