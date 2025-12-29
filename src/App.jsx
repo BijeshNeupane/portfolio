@@ -23,8 +23,7 @@ const App = () => {
       webhookUrl:
         "https://ramramramram.app.n8n.cloud/webhook/dd3b2486-6cf2-4cfd-989c-27ce565bb0dc/chat",
       initialMessages: [
-        "Hi there! 👋",
-        "I am Bijesh's bot. How can I assist you today?",
+        "Hi there! I am a chatbot",
         "You can ask me about Bijesh's projects, skills, or experience.",
       ],
     });
