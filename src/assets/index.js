@@ -21,6 +21,8 @@ import tailwind from "./tech/tailwind.png";
 import threejs from "./tech/threejs.svg";
 import csharp from "./tech/csharp.png";
 import dotnet from "./tech/dotnet.png";
+import reactNative from "./tech/reactNative.png";
+import nextjs from "./tech/nextjs.png";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
@@ -38,6 +40,7 @@ import pasale from "./pasale.png";
 import pollapp from "./pollapp.png";
 import movieapp from "./movieApp.png";
 import typescript from "./tech/typescript.png";
+import techYatra from "./company/techYatra.png";
 
 export {
   logo,
@@ -77,4 +80,7 @@ export {
   movieapp,
   typescript,
   pasale,
+  reactNative,
+  nextjs,
+  techYatra,
 };

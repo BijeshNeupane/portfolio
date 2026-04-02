@@ -55,12 +55,19 @@ const Navbar = () => {
               key={nav.id}
               className={`${
                 active === nav.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
+              } hover:text-white text-[18px] font-medium cursor-pointer py-2`}
               onClick={() => setActive(nav.title)}
             >
               <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
           ))}
+          <a
+            href="./Resume.pdf"
+            download
+            className="bg-[#23245d] py-2 px-3 rounded-xl outline-none w-fit h-fit text-white font-bold shadow-md shadow-primary hover:scale-105 transition-all duration-100"
+          >
+            Download CV
+          </a>
         </ul>
 
         <div className="sm:hidden flex flex-1 justify-end items-center">
@@ -91,6 +98,14 @@ const Navbar = () => {
                   <a href={`#${nav.id}`}>{nav.title}</a>
                 </li>
               ))}
+
+              <a
+                href="./Resume.pdf"
+                download
+                className="rounded-xl outline-none w-fit text-white font-medium shadow-md text-[16px]"
+              >
+                Download CV
+              </a>
             </ul>
           </div>
         </div>

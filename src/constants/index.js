@@ -28,6 +28,9 @@ import {
   pollapp,
   movieapp,
   pasale,
+  reactNative,
+  nextjs,
+  techYatra,
 } from "../assets";
 
 export const navLinks = [
@@ -86,6 +89,14 @@ const technologies = [
     icon: reactjs,
   },
   {
+    name: "Next JS",
+    icon: nextjs,
+  },
+  {
+    name: "React Native",
+    icon: reactNative,
+  },
+  {
     name: "Redux Toolkit",
     icon: redux,
   },
@@ -100,10 +111,6 @@ const technologies = [
   {
     name: "MongoDB",
     icon: mongodb,
-  },
-  {
-    name: "Three JS",
-    icon: threejs,
   },
   {
     name: "git",
@@ -121,7 +128,7 @@ const experiences = [
     company_name: "College Incubation Program",
     icon: newsummit,
     iconBg: "#6f3E6f",
-    date: "November 2024 - February 2025",
+    date: "November 2024 - March 2025",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and backend developers to create high-quality products.",
@@ -130,7 +137,7 @@ const experiences = [
     ],
   },
   {
-    title: "nextjs Intern",
+    title: "Nextjs Intern",
     company_name: "Volgai",
     icon: volgai,
     iconBg: "#3284a4",
@@ -140,6 +147,19 @@ const experiences = [
       "Collaborating with senior developers and designers to translate UI/UX wireframes into interactive user interfaces.",
       "Writing clean, reusable, and efficient code while following industry best practices.",
       "Doing optimization of website for better performance.",
+    ],
+  },
+  {
+    title: "Nextjs and React native Trainee",
+    company_name: "Techyatra Labs",
+    icon: techYatra,
+    iconBg: "#103876",
+    date: "January 2026 - Current",
+    points: [
+      "Developing and maintaining web applications using technologies such as nextjs and tailwindcss.",
+      "Developing app using react native and expo.",
+      "Integrating apis and handling state management.",
+      "Api optimization using tanstack query.",
     ],
   },
 ];
