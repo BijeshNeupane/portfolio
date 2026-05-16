@@ -62,7 +62,7 @@ const services = [
     icon: backend,
   },
   {
-    title: "Graphics Designer",
+    title: "App Developer",
     icon: creator,
   },
 ];
@@ -150,11 +150,11 @@ const experiences = [
     ],
   },
   {
-    title: "Nextjs and React native Trainee",
+    title: "Nextjs and React native Developer",
     company_name: "Techyatra Labs",
     icon: techYatra,
     iconBg: "#103876",
-    date: "January 2026 - Current",
+    date: "November 2026 - Current",
     points: [
       "Developing and maintaining web applications using technologies such as nextjs and tailwindcss.",
       "Developing app using react native and expo.",
